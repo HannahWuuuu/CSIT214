@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #F5F5F5;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            font-size: 1.3em;
+        }
+
+        .uow-icon {
+            position: relative;
+            left:55px;
+        }
+
+        .sidebar {
+            /* flex: 1 1 0;
+            max-width: 300px; */
+            width: 400px;
+            padding: 2rem 1rem;
+            background-color: #001641;
+        }
+
+        .menu {
+            position: relative;
+            top: 50px;
+            font-size: 1.4em;
+        }
+
+        .sidebar .menu {
+            margin: 0.8em auto;
+        }
+
+        .sidebar .menu .menu-item {
+            display: flex;
+            padding: 1em;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.8rem;
+            transition: 0.2s linear;
+        }
+        .sidebar .menu .icon{
+            font-size: 1.1em;
+        }
+
+        .sidebar .menu .menu-item:hover{
+            background-color:rgba(255, 255, 255, .2) ;
+            /* border-left: 3px solid white; */
+        }
+
+        .wrap {
+            position: relative;
+            width: 540px;
+            height: 620px;
+            margin:auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 10px;
+            padding: 60px;
+
+            /* background-color: rgba(255, 255, 255, .1); */
+            background-color: white;
+            box-shadow: 15px 15px 30px rgba(0, 0, 0, .3);
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, .5);
+            border-left: 1px solid rgba(255, 255, 255, .5);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #001641;
+            font-size: 50px;
+            position: relative;
+            top: 10px;
+        }
+
+        .radio-contaioner {
+            accent-color: #001641;
+            font-size: 25px;
+            position: relative;
+            top: 25px;
+        }
+
+        .radio-contaioner label {
+            position: relative;
+            cursor: pointer;
+            padding-right: 30px;
+
+        }       
+
+        .input-box {
+            position: relative;
+            margin: 55px 0;
+            top: 20px;
+            border-bottom: 1.8px solid #001641;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 25px;
+            pointer-events: none;
+            transition: .4s;
+        }
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -5px;
+        }
+
+        .input-box input,
+        .input-box select {
+            width: 650px;
+            height: 40px;
+            padding: 0 5px;
+
+            font-size: 20px;
+            font-weight: bold;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .icon-inbox {
+            position: absolute;
+            right: 2px;
+            font-size: 1.2em;
+            color: #001641;
+            line-height: 50px;
+            background-color: transparent;
+        }
+
+        .remember-me label input {
+            accent-color: #001641;
+            border-color:  #001641;
+        }
+
+        button {
+            position: relative;
+            left: 110px;
+            top: 35px;
+            width: 200px;
+            height: 60px;
+            box-shadow: 0 0 10px  rgba(255, 255, 255, .1);
+            font-size: 20px;
+            font-weight: bold;
+            color: #001641;
+            border-radius: 40px;
+            border: none;
+            outline: none;
+        }
+
+        button:hover {
+            background-color:rgba(45, 51, 92, 0.2) ;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Navigation bar -->
+    <div class="container">
+        <aside class="sidebar">
+            <div class="uow-icon">
+                <a href="https://www.uow.edu.au" class="logo">
+                    <img src="uow_logo_no_background.png" alt="uow logo" height="120px">
+                </a>
+            </div>  
+            <nav class="menu">
+                <a href="" class="menu-item">
+                    <span>&nbsp &nbsp &nbsp</span>
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span>&nbsp &nbsp</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="" class="menu-item">
+                    <span>&nbsp &nbsp &nbsp</span>
+                    <span class="icon">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </span>
+                    <span>&nbsp &nbsp</span>
+                    <span>Room Booking</span>
+                </a>
+                <a href="" class="menu-item">
+                    <span>&nbsp &nbsp &nbsp</span>
+                    <span class="icon">
+                        <ion-icon name="build-outline"></ion-icon>
+                    </span>
+                    <span>&nbsp &nbsp</span>
+                    <span>Manage Booking</span>
+                </a>
+                <a href="" class="menu-item">
+                    <span>&nbsp &nbsp &nbsp</span>
+                    <span class="icon">
+                        <ion-icon name="exit-outline"></ion-icon>
+                    </span>
+                    <span>&nbsp &nbsp</span>
+                    <span>Log Out</span>
+                </a>
+            </nav>
+        </aside>
+
+        <div class="wrap">
+            <div class="form-box">
+                <h1>Login</h1>
+                <br>
+                <div class="radio-contaioner"> 
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span>Login as :</span>&nbsp&nbsp&nbsp&nbsp
+                    <input type="radio" name="user-type" checked id="Staff">
+                    <label for="Staff">Staff</label>
+                    <input type="radio" name="user-type" checked id="Student">
+                    <label for="Student">Student</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon-inbox">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </span>
+                    <input class="id" type="id" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon-inbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input class="pw" type="Password" required>
+                    <label for>Password</label>
+                </div>
+
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+
+                <button class="login" type="submit">Log in</button>
+            </div>
+        </div>
+     </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    
+</body>
+</html>
